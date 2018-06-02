@@ -1,0 +1,195 @@
+<!DOCTYPE HTML>
+
+<html>
+	<head>
+		<title>God's Eye</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+
+	</head>
+	<body>
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<div class="logo">
+							<span class="icon fa-eye"></span>
+						</div>
+						<div class="content">
+							<div class="inner">
+								<h1>God's Eye</h1>
+								<p>A credible electoral management System committed to strengthening democracy.</p>
+								<p> </p>
+								<p>Kenyans are watching.</p>
+							</div>
+						</div>
+						<nav>
+							<ul>
+								<li><a href="#intro">Home</a></li>
+								<li><a href="#vote">Vote</a></li>
+								<li><a href="#Vote-Events"> Vote Events</a></li>
+								<li><a href="#Countdown">Countdown</a></li>
+								<li><a href="#results">Results</a></li>
+								<li><a href="#contact">Contact</a></li>
+								<!--<li><a href="#elements">Elements</a></li>-->
+							</ul>
+						</nav>
+					</header>
+
+				<!-- Main -->
+					<div id="main">
+
+						<!-- Home page -->
+							<article id="intro">
+								<h2 class="major">Introduction</h2>
+								<span class="image main"><img src="images/pic01.jpg" alt="" /></span>
+								<p>God's Eye is responsible for conducting or supervising referenda and elections.</p>
+								<p>Voting is a very important exercise in every institution or unit through which people are able to come with their preferred leaders.</p>
+							</article>
+
+						<!-- Vote page -->
+							<article id="vote">
+								<h2 class="major">Voting Process</h2>
+								
+								<p><a href="#Vote-Events">Vote Events</a>.</p>
+								<h3>How to vote </h3>
+								<p>Input account and select candidate. If account is verified then vote is recorded.</p>
+								<form method="post" action="http://localhost:7545/vote">
+										<div class="field half first">
+											<label for="name">Account</label>
+											<input type="text" name="name" id="name" /> 
+										</div>
+										<div class="field half first">
+											<label for="email">Candidate</label>
+											<select>
+												<option value="">Candidates</option>
+											</select> 
+										</div>
+										
+										<ul class="actions">
+											<li><input type="submit" value="Vote" class="special" /></li>
+											<li><input type="reset" value="Reset" /></li>
+										</ul>
+									</form>
+								
+							</article>
+							
+						<!-- #Vote-Events -->	
+							<article id="Vote-Events">
+									<h2 class="major">Vote Events</h2>
+									
+									
+									<form method="post" action="#">
+
+										<div class="field half first">
+												<p><a href="#Vote-Event">Vote event name</a>
+										</div>
+										
+									</form><br><br>
+									<p><a href="#vote">Back</a>.</p>
+								</article>
+						<!-- One Vote-Event -->
+						<article id="Vote-Event">
+							<h2 class="major">Vote Events</h2>
+							
+							
+							<p><a href="#Candidates">Candidates</a>.</p>
+							<p><a href="#vote">Back</a>.</p>
+						</article>
+						
+						</article>
+						<!-- #Candidates -->	
+						<article id="Candidates">
+							<h2 class="major">Candidates</h2>
+							
+								<form method="post" action="#">
+
+										<div class="field half first">
+												<p><a href="#Vote-Event">Candidate name</a>
+										</div>
+										
+									</form>										
+							<p><a href="#vote">Back</a>.</p>
+						</article>
+						<!-- #Count down -->	
+						<article id="Countdown">
+								<h2 class="major">Countdown</h2>
+								
+									<form method="get" action="#">
+	
+											<div class="field half first">
+											</div>
+											
+										</form>										
+								<p><a href="#vote">Back</a>.</p>
+							</article>
+					
+						
+
+						<!-- results Page -->
+							<article id="results">
+								<h2 class="major">Results</h2>
+								<form method="get" action="http://localhost:7545/count/:candidate">
+	
+											<div class="field half first">
+											</div>
+											
+										</form>	
+							</article>
+
+						<!-- Contact -->
+							<article id="contact">
+								<h2 class="major">Contact</h2>
+								<form method="post" action="#">
+									<div class="field half first">
+										<label for="name">Name</label>
+										<input type="text" name="name" id="name" />
+									</div>
+									<div class="field half">
+										<label for="email">Email</label>
+										<input type="text" name="email" id="email" />
+									</div>
+									<div class="field">
+										<label for="message">Message</label>
+										<textarea name="message" id="message" rows="4"></textarea>
+									</div>
+									<ul class="actions">
+										<li><input type="submit" value="Send Message" class="special" /></li>
+										<li><input type="reset" value="Reset" /></li>
+									</ul>
+								</form>
+								<ul class="icons">
+									<li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
+									<li><a href="#" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
+									<li><a href="#" class="icon fa-instagram"><span class="label">Instagram</span></a></li>
+									<li><a href="#" class="icon fa-github"><span class="label">GitHub</span></a></li>
+								</ul>
+							</article>
+
+						
+
+					</div>
+
+				<!-- Footer -->
+					<footer id="footer">
+						<p class="copyright">God's Eye.</p>
+					</footer>
+
+			</div>
+
+		<!-- BG -->
+			<div id="bg"></div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/skel.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
