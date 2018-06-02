@@ -59,15 +59,16 @@
 								<p><a href="#Vote-Events">Vote Events</a>.</p>
 								<h3>How to vote </h3>
 								<p>Input account and select candidate. If account is verified then vote is recorded.</p>
-								<form method="post" action="http://localhost:7545/vote">
+								<form id="castVote" action="">
 										<div class="field half first">
 											<label for="name">Account</label>
-											<input type="text" name="name" id="name" /> 
+											<input type="text" name="name" id="name" required/> 
 										</div>
 										<div class="field half first">
 											<label for="email">Candidate</label>
 											<select>
-												<option value="">Candidates</option>
+												<option value="1">John Doe</option>
+												<option value="2">Mary Sue</option>
 											</select> 
 										</div>
 										

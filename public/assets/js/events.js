@@ -1,4 +1,4 @@
-candidates = 2;
+var candidates = 2;
 function httpGetAsync(theUrl, callback)
 {
     var xmlHttp = new XMLHttpRequest();
@@ -55,3 +55,8 @@ function getResults(){
     }
 }
 
+voteForm = document.getElementById("castVote");
+voteForm.addEventListener("submit", castVote);
+function castVote(event) {
+    console.log("Vote cast");
+}
