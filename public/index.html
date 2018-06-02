@@ -34,7 +34,7 @@
 								<li><a href="#vote">Vote</a></li>
 								<li><a href="#Vote-Events"> Vote Events</a></li>
 								<li><a href="#Countdown">Countdown</a></li>
-								<li><a href="#results">Results</a></li>
+								<li><a href="#results" id="results" onclick="getResults()">Results</a></li>
 								<li><a href="#contact">Contact</a></li>
 								<!--<li><a href="#elements">Elements</a></li>-->
 							</ul>
@@ -134,7 +134,7 @@
 						<!-- results Page -->
 							<article id="results">
 								<h2 class="major">Results</h2>
-								<form method="get" action="http://localhost:7545/count/:candidate">
+								<form method="get" action="">
 	
 											<div class="field half first">
 											</div>
@@ -187,9 +187,9 @@
 
 		<!-- Scripts -->
 			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/events.js"></script>
 			<script src="assets/js/skel.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
-
 	</body>
 </html>

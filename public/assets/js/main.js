@@ -23,6 +23,7 @@
 			$header = $('#header'),
 			$footer = $('#footer'),
 			$main = $('#main'),
+			$results = $('#results'),
 			$main_articles = $main.children('article');
 
 		// Disable animations/transitions until the page has loaded.
@@ -320,6 +321,35 @@
 
 				});
 
+			//Results
+			/*
+			$results.click(function(){
+				alert("yea");
+				$.get(
+					'http://localhost:8080/count/1/',
+					{"": ""},
+					function(data){
+						console.log(data)
+					}
+				);
+				$.ajax({
+					url: 'http://localhost:8080/count/1',
+					type: 'GET',
+					dataType: 'json',
+					headers: {
+						"accept": "application/json",
+						"Access-Control-Allow-Origin": "*"
+					},
+					contentType: 'application/json; charset=utf-8',
+					success: function (result) {
+					   // CallBack(result);
+					   console.log(result);
+					},
+					error: function (error) {
+						
+					}
+				});
+			});*/
 				$window.on('keyup', function(event) {
 
 					switch (event.keyCode) {
