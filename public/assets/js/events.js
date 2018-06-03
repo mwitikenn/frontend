@@ -49,14 +49,48 @@ function getResults(){
     //fetch results
     for (let index = 1; index <= candidates; index++) {
         httpGetAsync("http://localhost:8080/count/" + index, function(data) {
-            renderCandidateList(index, data);
+            renderCandidateList(index, JSON.parse(data));
             console.log("Candidate " + index + " got " + data + " votes"); 
         });
     }
 }
 
-voteForm = document.getElementById("castVote");
-voteForm.addEventListener("submit", castVote);
-function castVote(event) {
-    console.log("Vote cast");
-}
+//Manually send form data
+let voteForm = document.getElementById("castVote");
+voteForm.addEventListener('submit', function (e) {
+    e.preventDefault();
+    var account = document.getElementById("account").value;
+    let option = document.getElementById("candidate");
+    var candidate = option.options[option.selectedIndex].value;
+
+    if (account !== null && candidate !== null){
+
+        var XHR = new XMLHttpRequest();
+        var urlEncodedData = "candidate="+ candidate + "&account=" + account;
+        
+        // Define what happens on successful data submission
+        XHR.addEventListener('load', function (event){
+            let response = JSON.parse(XHR.response);
+            let body = response["message"] || response;
+            alert(body);
+            voteForm.reset();
+        })
+
+        // Define what happens in case of error
+        XHR.addEventListener('error', function(event) {
+            alert('Oops! Unable to cast vote.');
+        });
+
+        // Set up our request
+        XHR.open('POST', 'http://localhost:8080/vote/');
+
+        // Add the required HTTP header for form data POST requests
+        XHR.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+
+        // Finally, send our data.
+        XHR.send(urlEncodedData);
+        
+    } else {
+        alert("Please fill in all fields");
+    }
+});
