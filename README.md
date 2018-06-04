@@ -2,6 +2,10 @@
 
 A distributed system based on the ethereum platform
 
+## Docker
+
+[darklotus/gods-eye-frontend](https://docker.io/darklotus/gods-eye-frontend)
+
 ## Pre-requisites
  * Docker
 
