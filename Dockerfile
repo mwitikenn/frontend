@@ -9,6 +9,8 @@ ADD nginx.conf /etc/nginx/
 ADD public/ /usr/share/nginx/html/
 ADD public/ /var/www/html/
 
+RUN mkdir /etc/nginx/logs/
+
 # Append "daemon off;" to the beginning of the configuration
 RUN echo "daemon off;" >> /etc/nginx/nginx.conf
 
