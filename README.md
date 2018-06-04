@@ -7,9 +7,10 @@ A distributed system based on the ethereum platform
 [darklotus/gods-eye-frontend](https://docker.io/darklotus/gods-eye-frontend)
 
 ## Pre-requisites
- * Docker
+ Ensure you have a docker hub account
 
 ## Installation
 
-1. Run app ```$ docker run -p 80:80 darklotus/gods-eye-frontend```
+1. Login to docker ```$ docker login```
+2. Run app ```$ docker run -p 80:80 darklotus/gods-eye-frontend```
 The app launches on [localhost](http://localhost)
