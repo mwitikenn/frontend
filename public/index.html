@@ -34,7 +34,7 @@
 								<li><a href="#vote">Vote</a></li>
 								<li><a href="#Vote-Events"> Vote Events</a></li>
 								<li><a href="#Countdown">Countdown</a></li>
-								<li><a href="#results">Results</a></li>
+								<li><a href="#results" id="results" onclick="getResults()">Results</a></li>
 								<li><a href="#contact">Contact</a></li>
 								<!--<li><a href="#elements">Elements</a></li>-->
 							</ul>
@@ -59,15 +59,16 @@
 								<p><a href="#Vote-Events">Vote Events</a>.</p>
 								<h3>How to vote </h3>
 								<p>Input account and select candidate. If account is verified then vote is recorded.</p>
-								<form method="post" action="http://localhost:7545/vote">
+								<form id="castVote" action="" method="post" id="castVote">
 										<div class="field half first">
 											<label for="name">Account</label>
-											<input type="text" name="name" id="name" /> 
+											<input type="text" name="account" id="account" required/> 
 										</div>
 										<div class="field half first">
 											<label for="email">Candidate</label>
-											<select>
-												<option value="">Candidates</option>
+											<select id="candidate" name="candidate">
+												<option value="1">John Doe</option>
+												<option value="2">Mary Sue</option>
 											</select> 
 										</div>
 										
@@ -134,12 +135,10 @@
 						<!-- results Page -->
 							<article id="results">
 								<h2 class="major">Results</h2>
-								<form method="get" action="http://localhost:7545/count/:candidate">
-	
-											<div class="field half first">
-											</div>
-											
-										</form>	
+								<!--<form method="get" action=""></form>-->
+									<div class="field half first" id="resultslist">
+										
+									</div>
 							</article>
 
 						<!-- Contact -->
@@ -187,9 +186,9 @@
 
 		<!-- Scripts -->
 			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/events.js"></script>
 			<script src="assets/js/skel.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
-
 	</body>
 </html>
